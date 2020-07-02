@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Boostrap 5 Login Page</title>
+  </head>
+  <body class="d-flex text-center bg-secondary">
+    <form class="form-login">
+      <img src="/node_modules/bootstrap-icons/icons/bootstrap.svg" alt="Bootstrap login icon" height="62" width="62" class="mb-3" />
+      <h4 class="mb-4 text-primary">Boostrap 5 Login Page</h4>
+      <div class="mb-2">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" />
+        <div id="emailHelp" class="text-black-50 form-text">
+          We'll never share your data with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+      </div>
+      <div class="mb-2 form-check">
+        <label class="form-check-label text-muted" for="rememberMeButton">Remember me</label>
+        <input type="checkbox" class="form-check-inline" id="rememberMeButton" />
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary btn-block mt-3 px-4 text-white">
+          Login
+        </button>
+      </div>
+      <div class="my-3">
+        <button type="button" class="btn btn-secondary text-muted" data-toggle="modal" data-target="#modalTest">
+          Reset password
+        </button>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block text-left"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Project goal
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Test Bootstrap 5 features.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link btn-block text-left collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                What's inside
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Bootstrap 5 components.
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTest" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reset password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Email address" />
+                <small id="helpId" class="form-text text-muted">You'll get a password reset link via email.</small>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary text-white" data-dismiss="modal">Reset password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $("#exampleModal").on("show.bs.modal", (event) => {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
+      });
+    </script>
+  </body>
+</html>
